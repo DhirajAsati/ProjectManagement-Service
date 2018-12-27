@@ -21,7 +21,7 @@ import lombok.Data;
 public class ProjectResource {
 	
 	@Id
-	private String id;
+	private String projectId;
 	
 	@Size(min=1, max=70, message="Project Name is required")
 	private String projectName;
@@ -35,10 +35,14 @@ public class ProjectResource {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private Date endDate;
 	
-	private String completedTasks;
+	private int completedTasks;
+	
+	private int totalTasks;
 	
 	private String priority;
 	
-	private String managerId;
+	private String userId;
+	
+	private String userName;
 
 }

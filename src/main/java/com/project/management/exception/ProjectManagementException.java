@@ -1,4 +1,4 @@
-package com.task.manager.exception;
+package com.project.management.exception;
 
 public class ProjectManagementException extends Exception {
 

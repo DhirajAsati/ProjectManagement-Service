@@ -19,16 +19,15 @@ import lombok.Data;
 public class TaskResource {
 	
 	@Id
-	private String id;
+	private String taskId;
 	
 	@Size(min=1, max=70, message="Task Name is required")
 	private String taskName;
 	
-	@Size(min=1, max=70, message="Project Name is required")
-	private String projectName;
+	private String projectId;
 	
+	private String parentId;
 	private String parentTask;
-	private String parentTaskDesc;
 	
 	private String priority;
 	
@@ -40,9 +39,8 @@ public class TaskResource {
 	@JsonDeserialize(using = CustomDateDeserializer.class)
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
 	private Date endDate;
-	
-	@Size(min=1, max=35, message="User Name is required")
-	private String userName;
+
+	private String userId;
 	
 	private String status;
 }

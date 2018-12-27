@@ -12,7 +12,7 @@ import lombok.Data;
 public class UserResource {
 
 	@Id
-	private String id;
+	private String userId;
 	
 	@Size(min=1, max=70, message="First Name is required")
 	private String firstName;
